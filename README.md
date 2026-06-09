@@ -253,6 +253,18 @@ with torch.no_grad():
       <b>4D Reconstruction Output</b>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <img src="demo/thumbnails/screen_record_1.jpg" width="400" alt="Screen Recording 1">
+      <br>
+      <b>Screen Recording 1</b>
+    </td>
+    <td align="center">
+      <img src="demo/thumbnails/screen_record_2.jpg" width="400" alt="Screen Recording 2">
+      <br>
+      <b>Screen Recording 2</b>
+    </td>
+  </tr>
 </table>
 
 
