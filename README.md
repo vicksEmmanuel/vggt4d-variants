@@ -236,10 +236,24 @@ with torch.no_grad():
 
 ## Demo Videos
 
-| Video | Description |
-|-------|-------------|
-| [cam_0002_zbuffer.mp4](demo/cam_0002_zbuffer.mp4) | Z-Buffer visualization |
-| [cam_0003.mp4](demo/cam_0003.mp4) | 4D reconstruction output |
+<table>
+  <tr>
+    <td align="center">
+      <a href="demo/cam_0002_zbuffer.mp4">
+        <img src="demo/thumbnails/cam_0002_zbuffer.jpg" width="400" alt="Z-Buffer Visualization">
+      </a>
+      <br>
+      <b>Z-Buffer Visualization</b>
+    </td>
+    <td align="center">
+      <a href="demo/cam_0003.mp4">
+        <img src="demo/thumbnails/cam_0003.jpg" width="400" alt="4D Reconstruction">
+      </a>
+      <br>
+      <b>4D Reconstruction Output</b>
+    </td>
+  </tr>
+</table>
 
 
 ## Project Structure
