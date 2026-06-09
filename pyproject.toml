@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vggt4d"
+version = "1.0.0"
+description = "VGGT4D: Mining Motion Cues in Visual Geometry Transformers for 4D Scene Reconstruction — bundles VGGT, FlashVGGT, VGGT-Omega, and VGGT4D variants."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+
+dependencies = [
+    # --- Core ---
+    "numpy<2",
+    "Pillow",
+    "einops",
+    "safetensors",
+    "opencv-python",
+    "scipy",
+    "tqdm",
+    "huggingface_hub",
+
+    # --- VGGT-Omega specific ---
+    "hydra-core",
+    "omegaconf",
+
+    # --- FlashVGGT specific ---
+    "accelerate",
+
+    # --- VGGT4D demo / vis ---
+    "gradio",
+    "viser",
+    "trimesh",
+    "matplotlib",
+    "requests",
+    "onnxruntime",
+    "pycolmap>=3.10.0",
+    "open3d",
+    "plyfile",
+]
+
+[project.optional-dependencies]
+demo = [
+    "gradio>=5.17.1",
+    "viser>=0.2.23",
+    "pydantic>=2.10",
+    "pyceres",
+    "scikit-image",
+    "scikit-learn",
+    "evo",
+    "git+https://github.com/jytime/LightGlue.git#egg=lightglue",
+]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vggt4d*", "vggt4d_multiview*", "training*", "vggt*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.txt"]

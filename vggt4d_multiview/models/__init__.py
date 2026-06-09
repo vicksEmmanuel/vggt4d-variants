@@ -1,0 +1,1 @@
+from vggt4d_multiview.models.vggt4d_multiview import VGGTFor4DMultiView
