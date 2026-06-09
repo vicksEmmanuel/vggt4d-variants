@@ -66,27 +66,19 @@ pip install -e ".[demo]"
 ### 2. Download Checkpoints
 
 ```bash
-mkdir -p ckpts/vggt ckpts/flashvggt ckpts/vggt-omega
+# One command downloads everything:
+./setup.sh
 
-# VGGT-1B
-wget -c "https://huggingface.co/facebook/VGGT-1B/resolve/main/model.pt" -O ckpts/vggt/model.pt
-
-# VGGT4D (fine-tuned tracker)
-wget -c "https://huggingface.co/facebook/VGGT_tracker_fixed/resolve/main/model_tracker_fixed_e20.pt?download=true" -O ckpts/flashvggt/model_tracker_fixed_e20.pt
-
-# FlashVGGT
-python -c "
-from huggingface_hub import hf_hub_download
-hf_hub_download(repo_id='ZipW/FlashVGGT', filename='flashvggt.pt', local_dir='ckpts/flashvggt')
-hf_hub_download(repo_id='ZipW/FlashVGGT', filename='flashvggt_stream.pt', local_dir='ckpts/flashvggt')
-"
-
-# VGGT-Omega (gated — requires HF token)
-python -c "
-from huggingface_hub import hf_hub_download
-hf_hub_download(repo_id='facebook/VGGT-Omega', filename='vggt_omega_1b_512.pt', local_dir='ckpts/vggt-omega')
-"
+# Or skip existing checkpoints with --rebuild:
+./setup.sh --rebuild
 ```
+
+This downloads:
+- **VGGT-1B** → `ckpts/vggt/model.pt`
+- **VGGT4D tracker** → `ckpts/flashvggt/model_tracker_fixed_e20.pt`
+- **FlashVGGT** → `ckpts/flashvggt/flashvggt.pt`
+- **FlashVGGT-Stream** → `ckpts/flashvggt/flashvggt_stream.pt`
+- **VGGT-Omega** → `ckpts/vggt-omega/vggt_omega_1b_512.pt` (gated — requires `HF_TOKEN`)
 
 ### 3. Run Demo
 
