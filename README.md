@@ -1,6 +1,6 @@
 <div align="center">
 
-<h2>VGGT4D: Mining Motion Cues in Visual Geometry Transformers for 4D Scene Reconstruction</h2>
+<h2>VGGT4D Variants: Mining Motion Cues in Visual Geometry Transformers for 4D Scene Reconstruction</h2>
 
 <!-- Badges -->
 <p>
@@ -10,7 +10,7 @@
   <a href="https://arxiv.org/abs/2511.19971">
     <img src="https://img.shields.io/badge/arXiv-2511.19971-B31B1B?logo=arxiv&logoColor=white" alt="arXiv">
   </a>
-  <a href="https://github.com/3DAgentWorld/VGGT4D">
+  <a href="https://github.com/vicksEmmanuel/vggt4d-variants">
     <img src="https://img.shields.io/badge/Code-GitHub-black?logo=github" alt="Code">
   </a>
 </p>
