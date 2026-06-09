@@ -234,6 +234,14 @@ with torch.no_grad():
 ```
 
 
+## Demo Videos
+
+| Video | Description |
+|-------|-------------|
+| [cam_0002_zbuffer.mp4](demo/cam_0002_zbuffer.mp4) | Z-Buffer visualization |
+| [cam_0003.mp4](demo/cam_0003.mp4) | 4D reconstruction output |
+
+
 ## Project Structure
 
 ```
